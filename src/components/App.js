@@ -115,6 +115,11 @@ function App() {
         navigate("/", { replace: true });
       })
       .catch((err) => {
+        setIsOpenInfoTooltip(true);
+        setIsRegister({
+          status: false,
+          message: "Что-то пошло не так! Попробуйте ещё раз.",
+        });
         console.log(err);
       });
   };
